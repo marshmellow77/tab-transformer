@@ -7,7 +7,7 @@ import boto3
 import time
 
 iam = boto3.client('iam')
-sagemaker_role = iam.get_role(RoleName='AmazonSageMaker-ExecutionRole-20220310T133301')['Role']['Arn']
+sagemaker_role = iam.get_role(RoleName='<role-name-with-sagemaker-execution-permission>')['Role']['Arn']
 
 train_model_id, train_model_version, train_scope = "pytorch-tabtransformerclassification-model", "*", "training"
 training_instance_type = "ml.m5.2xlarge"
